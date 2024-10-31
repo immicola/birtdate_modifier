@@ -31,7 +31,8 @@ change_creation_date() {
 
     # Изменяем дату создания через debugfs
     sudo debugfs -w -R "set_inode_field <$inode> crtime $formatted_date" "$device"
-  done
+    echo 2 | sudo tee /proc/sys/vm/drop_caches
+done
 }
 
 # Запуск функции для указанного файла или директории
@@ -50,3 +51,4 @@ fi
 echo 2 | sudo tee /proc/sys/vm/drop_caches > /dev/null
 
 echo "Дата создания установлена на $formatted_date для всех файлов в $2, и кэш очищен."
+
