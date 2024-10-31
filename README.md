@@ -9,7 +9,7 @@ add `-Recurse` for directory<br>
 add filename to -FileName argument after path to file for files
 
 ## How to know your path?
-`pwd`
+`pwd` 
 
 ## How to add alias on linux?
 in your `~/.bashrc` add line: `alias bdate="{path_of_script}./birth_date_changer.sh"`

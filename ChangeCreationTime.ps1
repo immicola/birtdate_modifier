@@ -7,7 +7,7 @@ param (
 # Function to set the creation time
 function Set-CreationTime {
     param (
-        [string]$Path,
+        [string]$Path, 
         [datetime]$NewDateTime
     )
     
